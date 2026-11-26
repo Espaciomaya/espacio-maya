@@ -3,211 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Espacio Maya | Carpintería de Melamina y Cancelería de Aluminio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Espacio Maya | Melamina y Cancelería de Aluminio</title>
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
-    :root { --primary: #22252A; --wood: #A67B5B; --wood-dark: #845E42; --light: #F7F6F2; --white: #FFFFFF; --gray: #5A5E66; }
-    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { font-family: 'Open Sans', sans-serif; color: var(--primary); background: var(--white); line-height: 1.6; }
-    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    header { position: sticky; top: 0; z-index: 100; background: var(--primary); padding: 14px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .logo { display: flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
-    nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-    nav a { color: #E2E4E8; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-    nav a:hover { color: var(--wood); }
-    .btn-wa-nav { background: #25D366; color: #fff !important; padding: 8px 16px; border-radius: 6px; }
-    .hero { background: linear-gradient(rgba(25,28,33,0.78), rgba(25,28,33,0.82)), url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=80') center/cover; color: var(--white); padding: 90px 5%; text-align: center; }
-    .hero span { color: var(--wood); font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; text-transform: uppercase; }
-    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); margin: 14px auto; max-width: 800px; }
-    .hero p { max-width: 680px; margin: 0 auto 28px; color: #E0E0E0; font-size: 1.05rem; }
-    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: 12px 26px; border-radius: 6px; font-weight: 700; text-decoration: none; display: inline-block; border: none; cursor: pointer; font-size: 0.95rem; }
-    .btn-primary { background: var(--wood); color: var(--white); }
-    .btn-outline { border: 2px solid var(--white); color: var(--white); background: transparent; }
-    section { padding: 70px 5%; max-width: 1200px; margin: auto; }
-    .bg-light { background: var(--light); max-width: 100%; }
-    .bg-light > .inner { max-width: 1200px; margin: auto; }
-    .sec-title { text-align: center; margin-bottom: 40px; }
-    .sec-title h2 { font-size: 2rem; margin-bottom: 10px; }
-    .sec-title p { color: var(--gray); max-width: 720px; margin: auto; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: var(--white); padding: 28px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border-top: 4px solid var(--wood); }
-    .card h3 { margin-bottom: 12px; color: var(--primary); }
-    .card p, .card li { color: var(--gray); font-size: 0.95rem; }
-    .card ul { padding-left: 18px; margin-top: 8px; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .project-card { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.08); background: var(--white); }
-    .project-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
-    .project-card .info { padding: 16px; }
-    .tag { font-size: 0.75rem; font-weight: 700; color: var(--wood-dark); text-transform: uppercase; }
-    .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 24px; }
-    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
-    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-    form { display: flex; flex-direction: column; gap: 14px; }
-    input, select, textarea { padding: 12px; border: 1px solid #CCC; border-radius: 6px; font-family: inherit; font-size: 0.95rem; }
-    footer { background: var(--primary); color: #CCC; text-align: center; padding: 40px 5%; }
-    footer a { color: var(--wood); text-decoration: none; margin: 0 10px; font-weight: 600; }
+    :root {
+      --madera: #7A4B26;
+      --madera-oscuro: #5E381B;
+      --grafito: #333333;
+      --fondo-claro: #F8F7F5;
+      --blanco: #FFFFFF;
+      --gris-texto: #555555;
+      --whatsapp: #25D366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--grafito);
+      background-color: var(--blanco);
+      line-height: 1.6;
+    }
+
+    /* Navegación */
+    header {
+      background-color: var(--blanco);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      height: 58px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--grafito);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--madera);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--fondo-claro) 0%, #EFECE6 100%);
+      padding: 70px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--madera);
+    }
+
+    .hero-logo {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      color: var(--grafito);
+      max-width: 780px;
+      margin: 0 auto 16px;
+      line-height: 1.25;
+    }
+
+    .hero h1 span {
+      color: var(--madera);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--gris-texto);
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--madera);
+      color: var(--blanco);
+      padding: 14px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--madera-oscuro);
+    }
+
+    /* Secciones generales */
+    section {
+      padding: 65px 20px;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      color: var(--grafito);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--gris-texto);
+      max-width: 640px;
+      margin: 0 auto 45px;
+    }
+
+    /* Identidad */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--fondo-claro);
+      padding: 28px;
+      border-radius: 8px;
+      border-top: 4px solid var(--madera);
+    }
+
+    .card h3 {
+      color: var(--madera);
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    /* Servicios */
+    .bg-alt {
+      background-color: var(--fondo-claro);
+      max-width: 100%;
+    }
+
+    .bg-alt-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--blanco);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--grafito);
+    }
+
+    .service-card.madera {
+      border-left-color: var(--madera);
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--grafito);
+    }
+
+    .service-card ul {
+      margin-left: 20px;
+      color: var(--gris-texto);
+    }
+
+    .service-card li {
+      margin-bottom: 6px;
+    }
+
+    /* Galería / Catálogo */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: var(--fondo-claro);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2DFD9;
+    }
+
+    .gallery-placeholder {
+      height: 210px;
+      background-color: #E5E1D8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--grafito);
+      font-weight: 600;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gallery-caption {
+      padding: 16px;
+    }
+
+    .gallery-caption h4 {
+      color: var(--grafito);
+      margin-bottom: 4px;
+    }
+
+    .gallery-caption p {
+      font-size: 0.9rem;
+      color: var(--gris-texto);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--grafito);
+      color: var(--blanco);
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .footer-logo-box {
+      background: var(--blanco);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-box img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    footer p {
+      color: #CCCCCC;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--whatsapp);
+      color: var(--blanco);
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.04);
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="#inicio" class="logo">
-    <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-      <rect x="2" y="2" width="36" height="36" rx="6" stroke="#A67B5B" stroke-width="3"/>
-      <path d="M10 29V11L20 20L30 11V29" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    ESPACIO MAYA
-  </a>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#catalogo">Catálogo y Videos</a>
-    <a href="#contacto" class="btn-wa-nav">Cotizar</a>
-  </nav>
-</header>
+  <!-- Encabezado con Logotipo Oficial -->
+  <header>
+    <div class="nav-container">
+      <a href="#inicio" class="brand-logo">
+        <img src="logo.png" alt="Espacio Maya - Melamina y Cancelería de Aluminio" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#contacto">Cotizar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section id="inicio" class="hero">
-  <span>Carpintería de Melamina y Cancelería de Aluminio</span>
-  <h1>Transformamos tus ideas en soluciones de confort.</h1>
-  <p>En Espacio Maya creemos que un mueble no solo debe verse bonito, también debe resolver las necesidades de cada familia y aprovechar al máximo cada espacio de su hogar.</p>
-  <div class="hero-btns">
-    <a href="#catalogo" class="btn btn-primary">Ver Trabajos Realizados</a>
-    <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+  <!-- Portada Principal -->
+  <div id="inicio" class="hero">
+    <img src="logo.png" alt="Logotipo Oficial Espacio Maya" class="hero-logo" />
+    <h1>Diseño funcional en <span>Melamina</span> y <span>Cancelería de Aluminio</span></h1>
+    <p>Fabricamos mobiliario a medida, cocinas integrales, clósets y cancelería residencial con acabados de precisión y durabilidad.</p>
+    <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20me%20interesa%20cotizar%20un%20proyecto." target="_blank" class="btn-primary">Solicitar Cotización por WhatsApp</a>
   </div>
-</section>
 
-<section id="nosotros">
-  <div class="sec-title">
-    <h2>Identidad y Filosofía</h2>
-    <p>Cada proyecto que fabricamos es completamente personalizado y diseñado de acuerdo con las dimensiones y necesidades de nuestros clientes.</p>
-  </div>
-  <div class="grid-3">
-    <div class="card">
-      <h3>Nuestra Filosofía</h3>
-      <p>En Espacio Maya no fabricamos muebles en serie. Diseñamos, fabricamos e instalamos soluciones a la medida con materiales de calidad, herrajes confiables y un proceso cuidadosamente supervisado para ofrecer muebles duraderos y funcionales.</p>
-    </div>
-    <div class="card">
-      <h3>Misión</h3>
-      <p>Diseñar, fabricar e instalar muebles de melamina y soluciones de cancelería de aluminio que transformen los espacios en ambientes funcionales, estéticos y duraderos, mejorando la calidad de vida de nuestros clientes mediante soluciones personalizadas y un servicio profesional.</p>
-    </div>
-    <div class="card">
-      <h3>Visión</h3>
-      <p>Consolidarnos como una empresa líder en soluciones integrales para el hogar en la Península de Yucatán, reconocida por la calidad de nuestros productos, la innovación en nuestros procesos y la confianza de nuestros clientes.</p>
-    </div>
-  </div>
-</section>
-
-<div id="servicios" class="bg-light">
-  <section class="inner">
-    <div class="sec-title">
-      <h2>Nuestros Servicios</h2>
-      <p>Fabricación e instalación profesional a la medida para hogares y negocios.</p>
-    </div>
+  <!-- Identidad Corporativa -->
+  <section id="nosotros">
+    <h2 class="section-title">Nuestra Esencia</h2>
+    <p class="section-subtitle">Transformamos cada espacio con materiales seleccionados, estructura sólida y estética limpia.</p>
     <div class="grid-3">
       <div class="card">
-        <h3>Carpintería en Melamina</h3>
-        <ul>
-          <li>Cocinas integrales modernas</li>
-          <li>Clósets y vestidores personalizados</li>
-          <li>Alacenas y muebles de baño</li>
-          <li>Escritorios y muebles para televisión</li>
-          <li>Mobiliario residencial a medida</li>
-        </ul>
+        <h3>Misión</h3>
+        <p>Crear soluciones arquitectónicas y de mobiliario en melamina y aluminio que optimicen los espacios de nuestros clientes con calidad artesanal y puntualidad.</p>
       </div>
       <div class="card">
-        <h3>Cancelería de Aluminio</h3>
-        <ul>
-          <li>Ventanas corredizas y proyectables</li>
-          <li>Puertas de aluminio residenciales</li>
-          <li>Canceles de baño en vidrio templado</li>
-          <li>Mosquiteros a medida</li>
-          <li>Soluciones arquitectónicas para el hogar</li>
-        </ul>
+        <h3>Visión</h3>
+        <p>Consolidarnos como el taller de referencia en diseño interior y cancelería por nuestra innovación, limpieza en instalación y confianza en cada entrega.</p>
+      </div>
+      <div class="card">
+        <h3>Filosofía</h3>
+        <p>Creemos en el trabajo honesto, los cortes exactos y el respeto por tu hogar o negocio. Cada proyecto se fabrica como si fuera propio.</p>
       </div>
     </div>
   </section>
-</div>
 
-<section id="catalogo">
-  <div class="sec-title">
-    <h2>Catálogo de Fabricaciones y Videos</h2>
-    <p>Conoce la calidad de nuestros acabados e instalaciones.</p>
-  </div>
-  <!-- AQUÍ PODRÁS CAMBIAR LAS FOTOS POR LAS DE TUS PROYECTOS -->
-  <div class="gallery-grid">
-    <div class="project-card">
-      <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80" alt="Cocina de melamina">
-      <div class="info"><span class="tag">Melamina</span><h3>Cocina Integral a Medida</h3></div>
-    </div>
-    <div class="project-card">
-      <img src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=800&q=80" alt="Clóset personalizado">
-      <div class="info"><span class="tag">Melamina</span><h3>Clóset y Vestidor Residencial</h3></div>
-    </div>
-    <div class="project-card">
-      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Cancel de baño">
-      <div class="info"><span class="tag">Aluminio</span><h3>Cancel de Baño y Ventanería</h3></div>
-    </div>
+  <!-- Servicios -->
+  <div id="servicios" class="bg-alt">
+    <section class="bg-alt-inner">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">Soluciones integrales fabricadas a la medida exacta de tu proyecto.</p>
+      <div class="grid-3">
+        <div class="service-card madera">
+          <h3>Carpintería en Melamina</h3>
+          <ul>
+            <li>Cocinas integrales modernas y funcionales</li>
+            <li>Clósets, vestidores y zapateras a medida</li>
+            <li>Muebles para TV, escritorios y recepciones</li>
+            <li>Herrajes de cierre suave y alta resistencia</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Cancelería de Aluminio</h3>
+          <ul>
+            <li>Ventanas corredizas, proyectables y fijos</li>
+            <li>Puertas principales y de patio en líneas residenciales</li>
+            <li>Canceles de baño en cristal templado</li>
+            <li>Mosquiteros y domos arquitectónicos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!-- SECCIÓN DE VIDEOS DE YOUTUBE -->
-  <div class="video-grid">
-    <div class="video-wrap">
-      <!-- Cambia el enlace src por el de tus videos de YouTube -->
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Espacio Maya 1" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<div id="contacto" class="bg-light">
-  <section class="inner">
-    <div class="sec-title">
-      <h2>Solicita tu Cotización</h2>
-      <p>Si estás construyendo, remodelando o quieres aprovechar mejor los espacios de tu hogar, en Espacio Maya estaremos felices de ayudarte.</p>
-    </div>
-    <div class="contact-grid">
-      <form onsubmit="enviarWhatsApp(event)">
-        <input type="text" id="nombre" placeholder="Tu nombre completo" required />
-        <select id="servicio">
-          <option value="Carpintería en Melamina">Carpintería en Melamina (Cocina, Clóset, Mueble)</option>
-          <option value="Cancelería de Aluminio">Cancelería de Aluminio (Ventanas, Puertas, Cancel)</option>
-          <option value="Proyecto Integral">Ambos / Proyecto Integral</option>
-        </select>
-        <textarea id="mensaje" rows="4" placeholder="Cuéntanos qué necesitas fabricar y medidas aproximadas..." required></textarea>
-        <button type="submit" class="btn btn-primary">Enviar Cotización por WhatsApp</button>
-      </form>
-      <div>
-        <!-- REEMPLAZA ESTE MAPA CON LA UBICACIÓN DE TU TALLER -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119216.65249068185!2d-89.7029671!3d20.9800511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56715cab450d17%3A0x5dfc155715abeb09!2zTcOpcmlkYSwgWXVjLg!5e0!3m2!1ses-419!2smx!4v1700000000000" width="100%" height="260" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+  <!-- Catálogo -->
+  <section id="catalogo">
+    <h2 class="section-title">Proyectos Realizados</h2>
+    <p class="section-subtitle">Conoce la calidad de nuestros acabados en obra residencial y comercial.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Cocina Integral en Melamina</div>
+        <div class="gallery-caption">
+          <h4>Cocina Integral Línea Madera</h4>
+          <p>Melamina texturizada resistente a la humedad con cubierta minimalista.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Cancel de Baño / Ventanal</div>
+        <div class="gallery-caption">
+          <h4>Cancelería Negro Mate</h4>
+          <p>Perfilería de aluminio reforzado con cristal claro y sellado hermético.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Clóset Vestidor</div>
+        <div class="gallery-caption">
+          <h4>Clóset Vestidor a Medida</h4>
+          <p>Distribución inteligente con cajoneras ocultas e iluminación cálida.</p>
+        </div>
       </div>
     </div>
   </section>
-</div>
 
-<footer>
-  <p><strong>ESPACIO MAYA</strong> — En Espacio Maya no fabricamos muebles; diseñamos espacios para vivir mejor.</p>
-  <p style="margin: 14px 0;">
-    <a href="https://facebook.com" target="_blank">Facebook</a> |
-    <a href="https://instagram.com" target="_blank">Instagram</a> |
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-  </p>
-  <p style="font-size: 0.85rem;">© 2026 Espacio Maya. Todos los derechos reservados.</p>
-</footer>
+  <!-- Pie de página -->
+  <footer id="contacto">
+    <div class="footer-logo-box">
+      <img src="logo.png" alt="Espacio Maya" />
+    </div>
+    <p>Melamina a Medida &bull; Cancelería de Aluminio Residencial y Comercial</p>
+    <p>&copy; 2026 Espacio Maya (espaciomaya.com). Todos los derechos reservados.</p>
+  </footer>
 
-<script>
-  function enviarWhatsApp(e) {
-    e.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const servicio = document.getElementById('servicio').value;
-    const mensaje = document.getElementById('mensaje').value;
-    // CAMBIA EL NÚMERO 5219990000000 POR TU NÚMERO DE WHATSAPP REAL
-    const telefono = "5219990000000";
-    const texto = `Hola Espacio Maya, soy ${nombre}. Me interesa cotizar: ${servicio}. Detalles: ${mensaje}`;
-    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`, '_blank');
-  }
-</script>
+  <!-- Botón Flotante WhatsApp -->
+  <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float">
+    Cotizar por WhatsApp
+  </a>
 
 </body>
 </html>
