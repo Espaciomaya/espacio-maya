@@ -356,4 +356,247 @@
 
     .footer-logo-box {
       background: var(--blanco);
-      display:
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-box img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    footer p {
+      color: #CCCCCC;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--whatsapp);
+      color: var(--blanco);
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con Logotipo Oficial -->
+  <header>
+    <div class="nav-container">
+      <a href="#inicio" class="brand-logo">
+        <img src="logo.png" alt="Espacio Maya - Melamina y Cancelería de Aluminio" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Portada Principal con Imagen de Fondo Nítida -->
+  <div id="inicio" class="hero">
+    <div class="hero-content-box">
+      <img src="logo.png" alt="Logotipo Oficial Espacio Maya" class="hero-logo" />
+      <h1>Diseño funcional en <span>Melamina</span> y <span>Cancelería de Aluminio</span></h1>
+      <p>Fabricamos mobiliario a medida, cocinas integrales, clósets y cancelería residencial con acabados de precisión y durabilidad.</p>
+      <a href="#cotizador" class="btn-primary">Cotizar mi Proyecto Ahora</a>
+    </div>
+  </div>
+
+  <!-- Identidad Corporativa -->
+  <section id="nosotros">
+    <h2 class="section-title">Nuestra Esencia</h2>
+    <p class="section-subtitle">Transformamos cada espacio con materiales seleccionados, estructura sólida y estética limpia.</p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Misión</h3>
+        <p>Crear soluciones arquitectónicas y de mobiliario en melamina y aluminio que optimicen los espacios de nuestros clientes con calidad artesanal y puntualidad.</p>
+      </div>
+      <div class="card">
+        <h3>Visión</h3>
+        <p>Consolidarnos como el taller de referencia en diseño interior y cancelería por nuestra innovación, limpieza en instalación y confianza en cada entrega.</p>
+      </div>
+      <div class="card">
+        <h3>Filosofía</h3>
+        <p>Creemos en el trabajo honesto, los cortes exactos y el respeto por tu hogar o negocio. Cada proyecto se fabrica como si fuera propio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <div id="servicios" class="bg-alt">
+    <section class="bg-alt-inner">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">Soluciones integrales fabricadas a la medida exacta de tu proyecto.</p>
+      <div class="grid-3">
+        <div class="service-card madera">
+          <h3>Carpintería en Melamina</h3>
+          <ul>
+            <li>Cocinas integrales modernas y funcionales</li>
+            <li>Clósets, vestidores y zapateras a medida</li>
+            <li>Muebles para TV, escritorios y recepciones</li>
+            <li>Herrajes de cierre suave y alta resistencia</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Cancelería de Aluminio</h3>
+          <ul>
+            <li>Ventanas corredizas, proyectables y fijos</li>
+            <li>Puertas principales y de patio en líneas residenciales</li>
+            <li>Canceles de baño en cristal templado</li>
+            <li>Mosquiteros y domos arquitectónicos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Catálogo -->
+  <section id="catalogo">
+    <h2 class="section-title">Proyectos Realizados</h2>
+    <p class="section-subtitle">Conoce la calidad de nuestros acabados en obra residencial y comercial.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Cocina Integral en Melamina</div>
+        <div class="gallery-caption">
+          <h4>Cocina Integral Línea Madera</h4>
+          <p>Melamina texturizada resistente a la humedad con cubierta minimalista.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Cancel de Baño / Ventanal</div>
+        <div class="gallery-caption">
+          <h4>Cancelería Negro Mate</h4>
+          <p>Perfilería de aluminio reforzado con cristal claro y sellado hermético.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">Foto de Clóset Vestidor</div>
+        <div class="gallery-caption">
+          <h4>Clóset Vestidor a Medida</h4>
+          <p>Distribución inteligente con cajoneras ocultas e iluminación cálida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cotizador y Ubicación en Google Maps -->
+  <div id="cotizador" class="bg-alt">
+    <section class="bg-alt-inner">
+      <h2 class="section-title">Cotizador y Ubicación</h2>
+      <p class="section-subtitle">Envíanos los detalles de tu proyecto o visítanos para asesorarte personalmente.</p>
+      
+      <div class="contact-grid">
+        <!-- Formulario Cotizador -->
+        <div class="quote-box">
+          <h3>Solicita tu Cotización</h3>
+          <p>Completa estos datos y envía tu solicitud directo a nuestro WhatsApp.</p>
+          
+          <form onsubmit="enviarCotizacionWhatsApp(event)">
+            <div class="form-group">
+              <label for="nombre">Tu Nombre</label>
+              <input type="text" id="nombre" placeholder="Ej. Carlos Méndez" required />
+            </div>
+
+            <div class="form-group">
+              <label for="servicio">Tipo de Proyecto</label>
+              <select id="servicio" required>
+                <option value="Cocina Integral en Melamina">Cocina Integral en Melamina</option>
+                <option value="Clóset o Vestidor a Medida">Clóset o Vestidor a Medida</option>
+                <option value="Mueble de TV / Escritorio / Oficina">Mueble de TV / Escritorio / Oficina</option>
+                <option value="Ventanas o Puertas de Aluminio">Ventanas o Puertas de Aluminio</option>
+                <option value="Cancel de Baño en Cristal Templado">Cancel de Baño en Cristal Templado</option>
+                <option value="Proyecto Completo (Melamina y Aluminio)">Proyecto Completo (Melamina y Aluminio)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="medidas">Medidas aproximadas o detalles</label>
+              <textarea id="medidas" rows="3" placeholder="Ej. Cocina en L de 3.20m x 2.10m en tono madera claro..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">Enviar Cotización por WhatsApp</button>
+          </form>
+        </div>
+
+        <!-- Mapa de Ubicación -->
+        <div id="ubicacion" class="map-box">
+          <h3>Nuestra Ubicación</h3>
+          <p>Atención en taller y visitas de medición a domicilio.</p>
+          
+          <iframe 
+            class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119204.3547842897!2d-89.7042159!3d20.987181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56715cab450d17%3A0x5dfc155715abeb09!2zTcOpcmlkYSwgWXVjLg!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="address-details">
+            <strong>Dirección:</strong> Mérida, Yucatán (Coloca aquí tu calle y colonia exacta)<br />
+            <strong>Horario:</strong> Lunes a Viernes de 9:00 AM a 6:00 PM &bull; Sábados de 9:00 AM a 2:00 PM<br />
+            <strong>Correo:</strong> contacto@espaciomaya.com
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-logo-box">
+      <img src="logo.png" alt="Espacio Maya" />
+    </div>
+    <p>Melamina a Medida &bull; Cancelería de Aluminio Residencial y Comercial</p>
+    <p>&copy; 2026 Espacio Maya (espaciomaya.com). Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón Flotante WhatsApp -->
+  <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float">
+    Cotizar por WhatsApp
+  </a>
+
+  <!-- Script del Cotizador hacia WhatsApp -->
+  <script>
+    function enviarCotizacionWhatsApp(event) {
+      event.preventDefault();
+      // IMPORTANTE: Cambia los ceros por tus 10 dígitos de WhatsApp (manteniendo 521 al inicio)
+      const telefonoWhatsApp = "5210000000000"; 
+      
+      const nombre = document.getElementById("nombre").value;
+      const servicio = document.getElementById("servicio").value;
+      const medidas = document.getElementById("medidas").value;
+
+      const mensaje = `Hola Espacio Maya, solicito una cotización:%0A%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Proyecto:* ${encodeURIComponent(servicio)}%0A*Detalles/Medidas:* ${encodeURIComponent(medidas)}`;
+      
+      window.open(`https://wa.me/${telefonoWhatsApp}?text=${mensaje}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>
