@@ -68,7 +68,7 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 24px;
+      gap: 22px;
       flex-wrap: wrap;
     }
 
@@ -84,39 +84,40 @@
       color: var(--madera);
     }
 
-    /* Hero con Imagen de Fondo Arquitectónica */
+    /* Hero con Imagen de Fondo más visible */
     .hero {
       background-image: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.88), rgba(248, 247, 245, 0.92)),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(248, 247, 245, 0.72)),
         url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      padding: 85px 20px;
+      padding: 90px 20px;
       text-align: center;
       border-bottom: 3px solid var(--madera);
     }
 
-    .hero-logo-wrapper {
-      background-color: rgba(255, 255, 255, 0.92);
-      display: inline-block;
-      padding: 16px 28px;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      margin-bottom: 26px;
+    .hero-content-box {
+      background-color: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(4px);
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 28px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
 
     .hero-logo {
-      max-width: 220px;
+      max-width: 210px;
       height: auto;
+      margin: 0 auto 20px;
       display: block;
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       color: var(--grafito);
-      max-width: 800px;
-      margin: 0 auto 16px;
+      margin: 0 auto 14px;
       line-height: 1.25;
     }
 
@@ -125,11 +126,11 @@
     }
 
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--grafito);
       font-weight: 500;
-      max-width: 660px;
-      margin: 0 auto 32px;
+      max-width: 640px;
+      margin: 0 auto 28px;
     }
 
     .btn-primary {
@@ -141,6 +142,8 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
       box-shadow: 0 4px 12px rgba(122, 75, 38, 0.3);
       transition: background-color 0.2s, transform 0.2s;
     }
@@ -269,6 +272,80 @@
       color: var(--gris-texto);
     }
 
+    /* Cotizador y Ubicación */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .quote-box, .map-box {
+      background: var(--blanco);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--madera);
+    }
+
+    .quote-box h3, .map-box h3 {
+      color: var(--grafito);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .quote-box p, .map-box p {
+      color: var(--gris-texto);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--grafito);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid #CCCCCC;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: var(--grafito);
+      background-color: #FAFAFA;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--madera);
+      background-color: var(--blanco);
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 290px;
+      border: 0;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .address-details {
+      font-size: 0.92rem;
+      color: var(--grafito);
+      line-height: 1.7;
+    }
+
     /* Footer */
     footer {
       background-color: var(--grafito);
@@ -279,167 +356,4 @@
 
     .footer-logo-box {
       background: var(--blanco);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 6px;
-      margin-bottom: 16px;
-    }
-
-    .footer-logo-box img {
-      height: 50px;
-      width: auto;
-      display: block;
-    }
-
-    footer p {
-      color: #CCCCCC;
-      font-size: 0.9rem;
-      margin-top: 8px;
-    }
-
-    /* Botón flotante WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background-color: var(--whatsapp);
-      color: var(--blanco);
-      padding: 14px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.04);
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Encabezado con Logotipo Oficial -->
-  <header>
-    <div class="nav-container">
-      <a href="#inicio" class="brand-logo">
-        <img src="logo.png" alt="Espacio Maya - Melamina y Cancelería de Aluminio" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#contacto">Cotizar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Portada Principal con Imagen de Fondo -->
-  <div id="inicio" class="hero">
-    <div class="hero-logo-wrapper">
-      <img src="logo.png" alt="Logotipo Oficial Espacio Maya" class="hero-logo" />
-    </div>
-    <h1>Diseño funcional en <span>Melamina</span> y <span>Cancelería de Aluminio</span></h1>
-    <p>Fabricamos mobiliario a medida, cocinas integrales, clósets y cancelería residencial con acabados de precisión y durabilidad.</p>
-    <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20me%20interesa%20cotizar%20un%20proyecto." target="_blank" class="btn-primary">Solicitar Cotización por WhatsApp</a>
-  </div>
-
-  <!-- Identidad Corporativa -->
-  <section id="nosotros">
-    <h2 class="section-title">Nuestra Esencia</h2>
-    <p class="section-subtitle">Transformamos cada espacio con materiales seleccionados, estructura sólida y estética limpia.</p>
-    <div class="grid-3">
-      <div class="card">
-        <h3>Misión</h3>
-        <p>Crear soluciones arquitectónicas y de mobiliario en melamina y aluminio que optimicen los espacios de nuestros clientes con calidad artesanal y puntualidad.</p>
-      </div>
-      <div class="card">
-        <h3>Visión</h3>
-        <p>Consolidarnos como el taller de referencia en diseño interior y cancelería por nuestra innovación, limpieza en instalación y confianza en cada entrega.</p>
-      </div>
-      <div class="card">
-        <h3>Filosofía</h3>
-        <p>Creemos en el trabajo honesto, los cortes exactos y el respeto por tu hogar o negocio. Cada proyecto se fabrica como si fuera propio.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <div id="servicios" class="bg-alt">
-    <section class="bg-alt-inner">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <p class="section-subtitle">Soluciones integrales fabricadas a la medida exacta de tu proyecto.</p>
-      <div class="grid-3">
-        <div class="service-card madera">
-          <h3>Carpintería en Melamina</h3>
-          <ul>
-            <li>Cocinas integrales modernas y funcionales</li>
-            <li>Clósets, vestidores y zapateras a medida</li>
-            <li>Muebles para TV, escritorios y recepciones</li>
-            <li>Herrajes de cierre suave y alta resistencia</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Cancelería de Aluminio</h3>
-          <ul>
-            <li>Ventanas corredizas, proyectables y fijos</li>
-            <li>Puertas principales y de patio en líneas residenciales</li>
-            <li>Canceles de baño en cristal templado</li>
-            <li>Mosquiteros y domos arquitectónicos</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Catálogo -->
-  <section id="catalogo">
-    <h2 class="section-title">Proyectos Realizados</h2>
-    <p class="section-subtitle">Conoce la calidad de nuestros acabados en obra residencial y comercial.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-placeholder">Foto de Cocina Integral en Melamina</div>
-        <div class="gallery-caption">
-          <h4>Cocina Integral Línea Madera</h4>
-          <p>Melamina texturizada resistente a la humedad con cubierta minimalista.</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">Foto de Cancel de Baño / Ventanal</div>
-        <div class="gallery-caption">
-          <h4>Cancelería Negro Mate</h4>
-          <p>Perfilería de aluminio reforzado con cristal claro y sellado hermético.</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">Foto de Clóset Vestidor</div>
-        <div class="gallery-caption">
-          <h4>Clóset Vestidor a Medida</h4>
-          <p>Distribución inteligente con cajoneras ocultas e iluminación cálida.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pie de página -->
-  <footer id="contacto">
-    <div class="footer-logo-box">
-      <img src="logo.png" alt="Espacio Maya" />
-    </div>
-    <p>Melamina a Medida &bull; Cancelería de Aluminio Residencial y Comercial</p>
-    <p>&copy; 2026 Espacio Maya (espaciomaya.com). Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botón Flotante WhatsApp -->
-  <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float">
-    Cotizar por WhatsApp
-  </a>
-
-</body>
-</html>
+      display:
