@@ -12,7 +12,7 @@
       --grafito: #333333;
       --fondo-claro: #F8F7F5;
       --blanco: #FFFFFF;
-      --gris-texto: #555555;
+      --gris-texto: #4A4A4A;
       --whatsapp: #25D366;
     }
 
@@ -84,24 +84,38 @@
       color: var(--madera);
     }
 
-    /* Hero */
+    /* Hero con Imagen de Fondo Arquitectónica */
     .hero {
-      background: linear-gradient(135deg, var(--fondo-claro) 0%, #EFECE6 100%);
-      padding: 70px 20px;
+      background-image: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.88), rgba(248, 247, 245, 0.92)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 85px 20px;
       text-align: center;
       border-bottom: 3px solid var(--madera);
     }
 
+    .hero-logo-wrapper {
+      background-color: rgba(255, 255, 255, 0.92);
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 26px;
+    }
+
     .hero-logo {
-      max-width: 240px;
+      max-width: 220px;
       height: auto;
-      margin-bottom: 24px;
+      display: block;
     }
 
     .hero h1 {
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       color: var(--grafito);
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto 16px;
       line-height: 1.25;
     }
@@ -111,26 +125,29 @@
     }
 
     .hero p {
-      font-size: 1.1rem;
-      color: var(--gris-texto);
-      max-width: 650px;
-      margin: 0 auto 30px;
+      font-size: 1.15rem;
+      color: var(--grafito);
+      font-weight: 500;
+      max-width: 660px;
+      margin: 0 auto 32px;
     }
 
     .btn-primary {
       display: inline-block;
       background-color: var(--madera);
       color: var(--blanco);
-      padding: 14px 30px;
+      padding: 15px 32px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
-      transition: background-color 0.2s;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 12px rgba(122, 75, 38, 0.3);
+      transition: background-color 0.2s, transform 0.2s;
     }
 
     .btn-primary:hover {
       background-color: var(--madera-oscuro);
+      transform: translateY(-2px);
     }
 
     /* Secciones generales */
@@ -323,9 +340,11 @@
     </div>
   </header>
 
-  <!-- Portada Principal -->
+  <!-- Portada Principal con Imagen de Fondo -->
   <div id="inicio" class="hero">
-    <img src="logo.png" alt="Logotipo Oficial Espacio Maya" class="hero-logo" />
+    <div class="hero-logo-wrapper">
+      <img src="logo.png" alt="Logotipo Oficial Espacio Maya" class="hero-logo" />
+    </div>
     <h1>Diseño funcional en <span>Melamina</span> y <span>Cancelería de Aluminio</span></h1>
     <p>Fabricamos mobiliario a medida, cocinas integrales, clósets y cancelería residencial con acabados de precisión y durabilidad.</p>
     <a href="https://wa.me/5210000000000?text=Hola%20Espacio%20Maya,%20me%20interesa%20cotizar%20un%20proyecto." target="_blank" class="btn-primary">Solicitar Cotización por WhatsApp</a>
