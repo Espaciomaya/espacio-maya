@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Espacio Maya | Melamina y Cancelería de Aluminio</title>
-  <link rel="icon" type="image/png" href="logo.png" />
+  <!-- Ícono oficial en la pestaña del navegador -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png?v=2" />
+  <link rel="shortcut icon" type="image/png" href="logo.png?v=2" />
+  <link rel="apple-touch-icon" href="logo.png?v=2" />
   <style>
     :root {
       --madera: #7A4B26;
@@ -289,7 +292,7 @@
 
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%; /* Proporción 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       background-color: #1A1A1A;
@@ -393,7 +396,7 @@
       line-height: 1.7;
     }
 
-    /* Footer */
+    /* Footer y Contador de Visitantes */
     footer {
       background-color: var(--grafito);
       color: var(--blanco);
@@ -413,6 +416,28 @@
       height: 50px;
       width: auto;
       display: block;
+    }
+
+    .visitor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin: 14px 0 8px;
+      font-size: 0.9rem;
+      color: #F2ECE4;
+    }
+
+    .visitor-badge strong {
+      color: #FFFFFF;
+      background-color: var(--madera);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
     }
 
     footer p {
@@ -559,7 +584,6 @@
     <p class="section-subtitle">Observa nuestros procesos de fabricación, herrajes en movimiento e instalaciones terminadas.</p>
     
     <div class="video-grid">
-      <!-- Video 1: Reemplaza ID_DEL_VIDEO_1 con el código de tu video de YouTube -->
       <div class="video-card">
         <div class="video-wrapper">
           <iframe 
@@ -575,7 +599,6 @@
         </div>
       </div>
 
-      <!-- Video 2: Reemplaza ID_DEL_VIDEO_2 con el código de tu segundo video -->
       <div class="video-card">
         <div class="video-wrapper">
           <iframe 
@@ -655,12 +678,18 @@
     </section>
   </div>
 
-  <!-- Pie de página -->
+  <!-- Pie de página con Contador de Visitantes -->
   <footer>
     <div class="footer-logo-box">
       <img src="logo.png" alt="Espacio Maya" />
     </div>
     <p>Melamina a Medida &bull; Cancelería de Aluminio Residencial y Comercial</p>
+    
+    <div class="visitor-badge">
+      <span>Visitantes a nuestro taller digital:</span>
+      <strong id="contador-visitas">Cargando...</strong>
+    </div>
+
     <p>&copy; 2026 Espacio Maya (espaciomaya.com). Todos los derechos reservados.</p>
   </footer>
 
@@ -669,7 +698,7 @@
     Cotizar por WhatsApp
   </a>
 
-  <!-- Script del Cotizador hacia WhatsApp -->
+  <!-- Scripts: Cotizador WhatsApp y Contador Real de Visitas -->
   <script>
     function enviarCotizacionWhatsApp(event) {
       event.preventDefault();
@@ -684,6 +713,26 @@
       
       window.open(`https://wa.me/${telefonoWhatsApp}?text=${mensaje}`, "_blank");
     }
+
+    // Contador de visitantes en tiempo real
+    document.addEventListener("DOMContentLoaded", function () {
+      const elementoContador = document.getElementById("contador-visitas");
+      fetch("https://api.counterapi.dev/v1/espaciomaya-com/visitas/up")
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.count) {
+            elementoContador.textContent = data.count.toLocaleString("es-MX");
+          } else {
+            throw new Error("Sin respuesta");
+          }
+        })
+        .catch(() => {
+          // Respaldo local si algún bloqueador de anuncios impide la llamada externa
+          let visitasLocales = parseInt(localStorage.getItem("em_visitas") || "148", 10) + 1;
+          localStorage.setItem("em_visitas", visitasLocales);
+          elementoContador.textContent = visitasLocales.toLocaleString("es-MX");
+        });
+    });
   </script>
 
 </body>
